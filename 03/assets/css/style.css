@@ -86,6 +86,9 @@ body {
     height: 100%;
 }
 .his_photo {
+    width: 100%;
+    max-height: 387px;
+    height: 100%;
     margin-bottom: 0;
 }
 /* About */
@@ -100,7 +103,7 @@ body {
 
 } */
 
-.subtitles {
+.subtitles_about {
    font-weight: 700; 
    font-size: 34px;
    text-align: center;
@@ -136,57 +139,73 @@ body {
 /* about section ends */
 
 /* skills */
-.skills_number {
-    padding-bottom: 100px;
-}
 
-.content_skills {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 970px;
+.skills-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 75px
 }
-
 .subtitles_skills {
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 0;
     font-weight: 700;
     font-size: 34px;
     line-height: 46px;
     text-align: center;
+    padding: 126px 0 50px;
 }
-.skills_number p {
+
+.skills-item {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    text-align: center;  
+    width: 100%;
+    max-width: 170px;
+}
+
+.subtitle {
+    display: block;
+    padding-top: 20px;
     font-weight: 400;
     font-size: 18px;
-    text-align: center;
-    line-height: 24.5px;
+    line-height: 24px;
 }
-.logo h4 {
+.skills-item .icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    align-self: center;
+}
+
+.skills-item-title {
+    margin: 0 auto;
+    padding: 25px 0 60px 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: #828282;
+    text-align: center;
     letter-spacing: 0.02em;
+    color: #828282;
 }
-.products_lists {
-    padding-top: 50px;
-    height: 230px;
-    max-width: 230px;
+
+.stars {
     display: flex;
     justify-content: space-between;
 }
-.logo {
-    width: 80px;
-    max-width: 80px;
-    margin: 0 auto;
-    height: 140px;
-    max-height: 140px;
-    
+
+.star-activ {
+    width: 26px;
+    height: 26px;
+    background-image: url('../img/Vector.png');
 }
 
-.skills_lvl {
-    margin-top: 60px;
+.star-inactiv {
+    width: 26px;
+    height: 26px;
+    background-image: url('../img/Vector2.png');
 }
+
 /* Portfolio */
 .portfolio {
     background-color: #F6F6F6;
