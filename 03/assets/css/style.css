@@ -25,6 +25,7 @@ ul {
 
 
 /*Core styles*/
+
 body {
     background-color: #fff;
     font-family: 'Open-Sans', sans-serif;
@@ -41,6 +42,7 @@ body {
 }
 
 /* Header */
+
 .nav_list {
     font-size: 0;
     text-align: center;
@@ -91,7 +93,9 @@ body {
     height: 100%;
     margin-bottom: 0;
 }
+
 /* About */
+
 .about_me {
     background: #F6F6F6;
     padding: 100px 0;
@@ -119,6 +123,7 @@ body {
     font-size: 18px;
     line-height: 1.33;
 }
+
 .about_text:not(:last-child) {
     margin-bottom: 30px;
 }
@@ -204,6 +209,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
 }
+
 .skill_item:last-child .skill_img {
     width: 55px;
 }
@@ -270,7 +276,8 @@ body {
     margin: 0 auto 60px;
     align-items: center;
 }
-.text_links{
+
+.text_link{
     font-size: 14px;
     font-weight: 400;
     color: #828282;
