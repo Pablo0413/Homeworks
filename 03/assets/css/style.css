@@ -41,8 +41,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
-
 .nav_list {
     font-size: 0;
     text-align: center;
@@ -93,8 +91,6 @@ body {
     height: 100%;
     margin-bottom: 0;
 }
-
-/* About */
 
 .about_me {
     background: #F6F6F6;
@@ -251,7 +247,7 @@ body {
     padding-bottom: 60px;
 }
 
-.send-message-button {
+.message-button {
     font-family: 'Open-Sans';
     font-weight: 700;
     font-size: 18px;
