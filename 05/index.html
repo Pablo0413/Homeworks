@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="./assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+        <div class="container">
+            <form action="#" method="POST" class="container_block">
+                <div class="title">
+                    <h2>Create an Account</h2>
+                </div>
+
+                <div class="block_forms_names">
+                    <div class="name">
+                        <label class="label">
+                            First Name
+                            <input type="text" name="name" class="input" required>
+                        </label>
+                        <label class="label">
+                            Last Name
+                            <input type="text" name="name" class="input" required>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="email">
+                    <label class="label">
+                        E-mail
+                        <input type="email" name="email" class="input" required>
+                    </label>
+                    <p class="text_email">We'll never share your email with anyone else.</p>
+                </div>
+
+                <div class="gender">
+                    <label class="radio_input_label">
+                        <input type="radio" name="radio" class="radio_input" checked>
+                        <span class="fake_radio"></span>
+                        Male
+                    </label>
+                    <label class="radio_input_label">
+                        <input type="radio" name="radio" class="radio_input" required>
+                        <span class="fake_radio"></span>
+                        Female
+                    </label>
+                </div>
+
+                <div class="block_forms_countries">
+                    <div class="country">
+                        <label for="country" class="label">Country
+                            <select name="country" class="country_select" required>
+                                <option value="">Select</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="CA">Canada</option>
+                            </select>
+                            <span class="arrow_targeting">
+                                <div class="first_arrow"></div>
+                                <div class="second_arrow"></div>
+                            </span>
+                        </label>
+                        <label class="label">City
+                            <input class="input" type="text" name="name" required>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="button">Sign up</button>
+                <p class="terms_policy">By clicking the 'Sign Up' button, you confirm that you accept our
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="terms" target="_blank">Terms of Use</a>
+                    and
+                    <a href="https://www.youtube.com/watch?v=G1IbRujko-A" class="terms" target="_blank">Privacy Policy</a>
+                    .</p>
+                <div class="link">
+                    <p class="links_log_in">Have an account?
+                        <a href="https://www.youtube.com/watch?v=guibQH94rCM" class="log_in" target="_blank">Log In</a>
+                    </p>
+                </div>
+            </form>    
+                
+            <form action="#" method="POST" class="container_block">
+                <div class="title">
+                    <h2>Profile</h2>
+                </div>
+                <div class="block_forms_account">
+                    <div class="block_avatar">
+                        <div class="avatar">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLRAsnwz-6MwibaH9AKlkcpDxmBIdn6wb7sHWmTtNQ=s900-c-k-c0x00ffffff-no-rj" alt="Profile Avatar">
+                        </div>
+                        <div class="attach">
+                            <label class="label_image">
+                                <input type="file" name="name" class="attach_avatar">
+                                <span class="icon-camera"></span>
+
+                            </label>
+                            <p class="attach_file">Up to 1 1MB (300x300 px)</p>
+                        </div>
+
+                       <button class="delete">
+                        <img class="img_trash" src="./assets/img/icons8-trash-24.png" alt="">
+                       </button>
+                    </div>
+
+                    <div class="block_forms_account">
+                        <div class="name">
+                            <label class="label">Name
+                                <input type="text" name="name" class="input">
+                            </label>
+                            <label class="label">Email
+                                <input type="email" name="email" class="input" >
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="block_forms_countries">
+                        <div class="country">
+                            <label for="country" class="label">Country
+                                <select name="country" class="country_select">
+                                    <option value="">Select</option>
+                                    <option value="UA">Ukraine</option>
+                                    <option value="CA">Canada</option>
+                                </select>
+                                <span class="arrow_targeting">
+                                    <div class="first_arrow"></div>
+                                    <div class="second_arrow"></div>
+                                </span>
+                            </label>
+                            <label class="label">City
+                                <input class="input" type="text" name="name">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="block_forms_contacts">
+                        <div class="zip_code">
+                            <label class="label">Zip Code
+                                <input type="text" name="name" maxlength="5" class="input">
+                            </label>
+                            <label class="label">Phone Number
+                                <input type="tel" name="phone" class="input">
+                            </label>
+                        </div>
+                        <button class="button_update">Update</button>
+                    </div>
+
+                </div>
+        </form>
+</body>
+</html>
