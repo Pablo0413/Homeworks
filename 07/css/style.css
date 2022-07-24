@@ -1,0 +1,165 @@
+html, body, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+}
+
+* {
+    transition: all .1s ease-in;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color:  #070707;
+    background: #3b3f45;
+}
+
+
+.header {
+    margin: 0 auto;
+    text-align: center;
+    color: #ff8984;
+    background: #4a4f56;
+}
+
+.header_block {
+    padding-top: 19px;
+    padding-bottom: 10px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 4px;
+}
+
+.header_text {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.container {
+    width: 100%;
+    max-width: 535px;
+    margin: 0 auto;
+}
+
+.shopping_list {
+    margin: 20px 0 45px 0;
+}
+
+.list_item {
+    position: relative;
+}
+
+
+input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+label {
+    display: flex;
+    width: 535px;
+    line-height: 45px;
+    color: #fFFFFF;
+    cursor: pointer;
+}
+
+.fake_checkbox::before {
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 16px;
+    margin-left: 12px;
+    background-color: #fFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=checkbox]:checked + label>.fake_checkbox::before {
+    background-color: #fFFFFF;
+    background-image: url("../css/img/done.svg");
+}
+
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+    color: #9b96ac;
+}
+
+.list_item:hover {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+label:hover {
+    background: #625E77;
+}
+
+.list_item:nth-child(2n+1) {
+    background: #88839e;
+}
+
+.list_item:nth-child(2n+2) {
+    background: #7a7593;
+}
+
+label:active {
+    background: #ff8984;
+}
+
+.span {
+    position: relative;
+    font-size: 11px;
+    line-height: 13px;
+    padding-left: 10px;
+
+}
+
+.span::before {
+    position: absolute;
+    content: '(';
+    top: 0;
+    left: 5px;
+}
+
+.span::after {
+    position: absolute;
+    content: ')';
+    top: 0;
+    right: -5px;
+}
+
+.footer_block {
+    margin-top: 45px;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    background: #4a4f56;
+}
+
+.footer_text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #ff8984;
+}
