@@ -3,11 +3,6 @@ body, html, p, h2, sup {
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
-    font-style: normal;
-  }
-
 html, body{
     height: 100%;
     width: 100%;
@@ -54,29 +49,66 @@ a {
     padding: 13px 0;
 }
 
-.container {
+.language {
+    display: inline-block;
+    margin-right: 50px;
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav ul {
+    display: flex;
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+
+.nav ul li:not(.nav ul li:last-child)::after {
+    content: '/';
+    top: 0;
+    right: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.main {
     padding-top: 80px;
     position: relative;
     z-index: 2;
 }
 
-.container_content {
+.content {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
     margin-top: 70px;
 }
 
-.wrapper_container {
+.wrapper_main {
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
 .sidebar {
-    margin-right: 20px;
+    margin-right: 35px;
     position: sticky;
-    top: 150px;
+    top: 100px;
     left: 150px;
     height: 100%;
 }
@@ -88,11 +120,11 @@ a {
     z-index: -1;
 }
 
-.content {
+.chapter {
     margin-bottom: 70px;
 }
 
-.content:last-child {
+.chapter:last-child {
     margin-bottom: 90px;
 }
 
@@ -116,27 +148,15 @@ a {
 }
 
 .sidebar_nav li {
-    padding: 10px;
     margin-bottom: 80px;
+    white-space: nowrap;
+    border-bottom: 1px solid #BDBDBD;
 }
 
-.whos_
 
-.language {
-    display: flex;
-    margin-right: 50px;
-    font-family: 'Tourney';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-}
 
-.nav {
-    display: inline-block;
-}
+
+
 
 .content_text {
     font-family: 'PT Sans', sans-serif;
@@ -144,25 +164,6 @@ a {
     font-weight: 400;
     font-size: 28px;
     line-height: 48px;
-}
-
-.nav ul {
-    display: flex;
-    font-family: 'Staatliches';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-}
-
-.nav ul li:not(.nav ul li:last-child)::after {
-    content: '/';
-    top: 0;
-    right: 0;
-    padding-right: 10px;
-    padding-left: 10px;
 }
 
 .content {
@@ -182,6 +183,7 @@ a {
     line-height: 48px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    margin-bottom: 40px;
 }
 .content_title {
     display: flex;
@@ -230,4 +232,84 @@ sup {
 
 .underline {
     text-decoration: underline;
+}
+
+.container {
+    margin-bottom: 70px;
+}
+
+.container_wrapper {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.title_container {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+
+.container_line {
+    margin: 0 40px 0 0;
+}
+
+.card_block {
+    margin: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.flip_card {
+    background-color: transparent;
+    width: 270px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.flip_card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip_card:hover .flip_card_inner {
+    transform: rotateX(180deg);
+}
+
+.flip_card_front, .flip_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip_card_front {
+    background: #e6e6e6;
+    border-radius: 8px;
+}
+
+.flip_card_back {
+    background: #1a1a1a;
+    border-radius: 8px;
+    transform: rotateX(180deg);
+}
+
+.flip_card_inner img, .flip_card_back img {
+    max-width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
