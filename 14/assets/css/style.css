@@ -1,0 +1,247 @@
+body,
+h2,
+a,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.content {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid #EFEEF3;
+    ;
+}
+
+.logo_block {
+    display: inline-block;
+    padding: 22px 0;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+}
+
+.logo_text {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 35px;
+    color: #16133D;
+}
+
+.logo_block:hover .logo_text {
+    font-weight: 600;
+}
+
+.logo_block:hover .logo path {
+    fill: aquamarine;
+    stroke: aquamarine;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+.services_title_block {
+    margin-bottom: 40px;
+}
+
+.subtitle_text {
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #7690A8;
+    margin-bottom: 10px;
+}
+
+.title_text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+    color: #16133D;
+}
+
+.services_content {
+    margin-bottom: 100px;
+}
+
+.cards_block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card_item {
+    background: #ffffff;
+    border: 1px solid #E5EAF4;
+    border-radius: 8px;
+    max-width: 370px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.card_item_wrapper {
+    padding: 40px;
+}
+
+
+svg.icon path.colour_one {
+    fill: #D1E7FF;
+}
+
+svg.icon path.colour_two {
+    fill: #e8f3ff;
+}
+
+svg.icon path.colour_three {
+    fill: #B9DCFF;
+}
+
+svg.icon path.colour_four {
+    fill: #007FFC;
+}
+
+.card_item:hover {
+    border: 1px solid #3DB370;
+}
+
+.card_item:hover svg.icon path.colour_one {
+    fill: #E1F4F5;
+}
+
+.card_item:hover svg.icon path.colour_two {
+    fill: #F4FEFF;
+}
+
+.card_item:hover svg.icon path.colour_three {
+    fill: #CAEFF2;
+}
+
+.card_item:hover svg.icon path.colour_four {
+    fill: #52C29D;
+}
+
+.card_item_icon {
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(21, 101, 216, 0.1);
+    border-radius: 16px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.card_item_icon svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card_item_title {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    color: #16133D;
+    margin-bottom: 15px;
+}
+
+.card_item_text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #16133D;
+    margin-bottom: 30px;
+}
+
+.link {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3DB370;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    font-size: 18px;
+    color: #12773e;
+}
+
+.footer {
+    background: #16133D;
+    height: 100%;
+    max-height: 197px;;
+}
+
+.footer .content {
+    padding: 40px 0;
+}
+
+.footer .logo_block {
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.footer .logo_text {
+    color: #ffffff;
+}
+
+.button {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.social-icon {
+    fill: #0D0D0D;
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    fill: #3DB370;
+}
