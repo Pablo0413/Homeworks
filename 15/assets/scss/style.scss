@@ -1,9 +1,244 @@
-@use 'font-face';
-@use 'reset';
+@use './components/font-face';
+@use './components/reset';
 
+$gold: #FFCC00;
+$subtitle-color: #898F8F;
+$description-title-color: #666666;
+$info-text-color: #333333;
+
+$border: 1px solid $gold;
+
+$title-font: 'Roboto', sans-serif;
+$subtitle-font: 'Raleway', sans-serif;
+$info-link-font: 'Open Sans', sans-serif;
+
+
+@mixin text-styles($color, $fw, $fz, $lh) {
+    color: $color;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+}
+
+@mixin title {
+    font-family: $title-font;
+    font-weight: 900;
+}
+
+@mixin description_title {
+    color: $description-title-color;
+    text-transform: capitalize;
+}
 
 .container {
+    margin: 100px auto;
     width: 100%;
     max-width: 1170px;
     box-sizing: border-box;
+}
+
+.section_head {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 45px;
+
+        .subtitle {
+            font-family: $subtitle-font;
+            @include text-styles($subtitle-color, 500, 18px, 24px);
+            margin-bottom: 15px;
+        }
+
+        .title {
+            @include title;
+            color: $gold;
+            font-size: 60px;
+            line-height: 66px;
+            margin-bottom: 40px;
+        }
+
+        .border {
+            position: relative;
+            display: inline-block;
+            border-bottom: $border;
+            width: 450px;
+
+                &::after {
+                    content: url(../img/bonfire-sharp.svg);
+                    position: absolute;
+                    width: 30px;
+                    height: 20px;
+                    bottom: 0;
+                    right: 50%;
+                    color: $gold;
+                    transform: translate(50%, 50%);
+                    background-color: #FFFFFF;
+                }
+        }
+}
+
+.section_tab {
+    margin: 0 70px;
+    display: flex;
+    text-align: center;
+}
+
+.image_block {
+    padding: 70px 85px 0 15px;
+    flex: 1 1 0;
+}
+
+.image_wrapper {
+    max-width: 400px;
+}
+
+.corner_wrapper {
+    position: relative;
+}
+
+.corner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.top_left_corner {
+    top: -15px;
+    left: -15px;
+    border-top: $border;
+    border-left: $border;
+}
+.top_right_corner {
+    top: -15px;
+    right: -15px;
+    border-top: $border;
+    border-right: $border;
+}
+.bottom_left_corner {
+    bottom: -15px;
+    left: -15px;
+    border-bottom: $border;
+    border-left: $border;
+}
+
+.bottom_right_corner {
+    bottom: -15px;
+    right: -15px;
+    border-bottom: $border;
+    border-right: $border;
+}
+
+.photo {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: $border;
+    }
+}
+
+.description_block {
+    flex: 1 1 0;
+    padding: 70px 0 70px 95px;
+    text-align: center;
+    border-left: $border;
+
+    .name_title {
+        @include title;
+        @include description_title;
+        font-size: 36px;
+        font-weight: 42px;
+        margin-bottom: 30px;
+    }
+
+    .border {
+        display: inline-block;
+        border-top: $border;
+        width: 100px;
+        margin-bottom: 30px;
+}
+
+    .description_title {
+        font-family: $subtitle_font;
+        @include description_title;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 30px;
+    }
+
+    .info_block_text {
+        font-family: $subtitle-font;
+        @include text-styles($info_text_color, 500, 14px, 24px);
+        margin-bottom: 20px;
+
+    }
+
+    a.link {
+        font-family: $info_link_font;
+        @include text-styles($description-title-color, 700, 14px, 14px);
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border: $border;
+    }
+    
+}
+
+.social-icons {
+    margin-bottom: 50px;
+    font-size: 0;
+
+    .social_icon_link:not(.social_icon_link:last-child) {
+        padding-right: 5px;
+        line-height: 0;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        stroke: #CCCCCC;
+        fill: #CCCCCC;
+        transition: all 0.3s ease;
+
+        &:hover {
+            stroke: $gold;
+            fill: $gold;
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+.border_dashed {
+    margin: 0 auto 25px auto;
+    display: block;
+    width: 20px;
+    height: 4px;
+    background-color: $gold;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 10px;
+        height: 4px;
+        background-color: $gold;
+
+    }
+
+    &::before {
+        left: -15px;
+
+    }
+
+    &::after {
+        right: -15px;
+    }
 }
