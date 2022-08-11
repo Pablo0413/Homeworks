@@ -50,6 +50,9 @@
   border: 1px solid #18B5DC;
   background: #18B5DC;
 }
+.header .hamburger {
+  display: none;
+}
 
 .main {
   background-color: #F6F6F6;
@@ -156,6 +159,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: fit-content;
+  display: inline-flex;
+  gap: 3px;
 }
 .who_we_are__cards .flip_card .flip_card__back .card__content .card__socials .icons__item {
   width: 42px;

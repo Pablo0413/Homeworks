@@ -1,3 +1,97 @@
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: 2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+ * Vortex
+ */
+.hamburger--vortex .hamburger-inner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hamburger--vortex .hamburger-inner::before, .hamburger--vortex .hamburger-inner::after {
+  transition-duration: 0s;
+  transition-delay: 0.1s;
+  transition-timing-function: linear;
+}
+.hamburger--vortex .hamburger-inner::before {
+  transition-property: top, opacity;
+}
+.hamburger--vortex .hamburger-inner::after {
+  transition-property: bottom, transform;
+}
+.hamburger--vortex.is-active .hamburger-inner {
+  transform: rotate(765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hamburger--vortex.is-active .hamburger-inner::before, .hamburger--vortex.is-active .hamburger-inner::after {
+  transition-delay: 0s;
+}
+.hamburger--vortex.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+}
+.hamburger--vortex.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(90deg);
+}
+
 /* lato-300 - latin */
 @font-face {
   font-family: "Lato";
@@ -91,6 +185,9 @@ a {
   color: #fff;
   border: 1px solid #18B5DC;
   background: #18B5DC;
+}
+.header .hamburger {
+  display: none;
 }
 
 .main {
@@ -198,6 +295,9 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: fit-content;
+  display: inline-flex;
+  gap: 3px;
 }
 .who_we_are__cards .flip_card .flip_card__back .card__content .card__socials .icons__item {
   width: 42px;
@@ -298,32 +398,57 @@ a {
   .header .list__item .list__link {
     font-size: 16px;
   }
-}
-@media screen and (max-width: 768px) {
-  .header .menu__list {
-    display: none;
+
+  .header .header__callback {
+    font-size: 16px;
   }
 
   .who_we_are__cards {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  .who_we_are__cards .cards__item {
+    flex: 0 0 33.333%;
+  }
+  .who_we_are__cards .flip_card {
+    margin-bottom: 10px;
   }
 
-  .who_we_are__cards .flip_card {
-    margin: 0 auto;
-    padding-bottom: 70%;
+  .footer .menu__list .list__item .list__link {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .header .header__callback {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .who_we_are__cards .card__post {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .who_we_are__cards .card__name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .footer .footer__socials.icons .icons__item {
+    width: 35px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 605px) {
+  .header .menu__list {
     display: none;
   }
 
   .footer .menu__list {
     flex-direction: column;
-  }
-}
-@media screen and (max-width: 385px) {
-  .who_we_are__cards .flip_card {
-    padding-bottom: 70%;
   }
 }
