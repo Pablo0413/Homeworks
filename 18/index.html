@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Adaptive</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container flex_row">
+            <a href="#" class="logo">case study</a>
+            <nav class="header_menu">
+                <ul class="menu__list">
+                    <li class="list__item"><a href="#" class="list__link">home</a></li>
+                    <li class="list__item"><a href="#" class="list__link">services</a></li>
+                    <li class="list__item"><a href="#" class="list__link">works</a></li>
+                    <li class="list__item"><a href="#" class="list__link">about</a></li>
+                    <li class="list__item"><a href="#" class="list__link">contacts</a></li>
+                </ul>
+                <a href="#" class="search__item">
+                    <img src="./assets/img/search.svg" alt="search__icon">
+                </a>
+                <a href="#" class="hamburger" id="hamburger">
+                    <span class="h_line"></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#hamburger').click(function() {
+                $('#nav').toggleClass('open');
+                $('#hamburger').toggleClass('open');
+            })
+        });
+    </script>
+</body>
+
+</html>
