@@ -66,6 +66,10 @@ $font: 'Lato', sans-serif;
             background: $active-color;
         }
     }
+
+    .hamburger {
+      display: none;              
+    } 
 }
 
 .main {
@@ -192,7 +196,11 @@ $font: 'Lato', sans-serif;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    
+                    width: fit-content; 
+                    display: inline-flex;
+                    gap: 3px;
+                
+
                   
                     .icons__item {
                         width: 42px;
