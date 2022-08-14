@@ -1,0 +1,30 @@
+.container {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.hero {
+    width: 100%;
+    background: #FFFFFF;
+    padding-top: 100px;
+}
+
+.footer {
+    width: 100%;
+    background: #F4F4F4;
+}
+
+.footer_container {
+    width: 90%;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 20px;
+}
+
+.flex_row {
+    display: flex;
+    justify-content: space-between;
+}
+
