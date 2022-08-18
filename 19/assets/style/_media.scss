@@ -1,0 +1,38 @@
+@media screen and (max-width:1266px) {
+    .container_wrapper {
+        padding-top: 100px;
+    }
+    .title {
+        margin-bottom: 60px;
+    }
+    .container {
+        justify-content: center;
+    }
+    .photo_block {
+        gap: 20px;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .container_wrapper{
+        padding-top: 80px;
+    }
+    .title{
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+    .photo_block{
+        gap: 10px;
+    }
+    
+}
+@media screen and (max-width:620px){
+    .photo_block{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px 10px;
+    }
+    
+}

@@ -1,0 +1,19 @@
+.grid_container {
+  display: grid;
+  grid-template-rows: 5, 1fr;
+  grid-template-columns: 10, 1fr;
+  gap: 15px;
+}
+
+.flip_card {
+  background-color: transparent;
+}
+
+.flip_card_inner {
+  max-width: 270px;
+  padding-bottom: 140%;
+}
+
+.flip_card_front {
+  width: 100%;
+}
