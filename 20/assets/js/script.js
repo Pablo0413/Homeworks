@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.flip_card_inner');
+let cards = document.querySelectorAll('.flip_card_inner');
 
 window.setInterval( function() { 
     let index = Math.floor((Math.random() * cards.length-1) + 1);
