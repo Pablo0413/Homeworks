@@ -1,0 +1,1 @@
+@media screen and (max-width:768px){.grid_container{grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(6,1fr)}}@media screen and (max-width:375px){.grid_container{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(9,1fr)}}
