@@ -197,14 +197,14 @@
   text-align: center;
 }
 .section_about .about_title {
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 60px;
   color: #FFFFFF;
   padding-bottom: 10px;
 }
-.section_about .about_description {
+.section_about .about_subheading {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -280,11 +280,113 @@
   color: #FFFFFF;
   padding-bottom: 24px;
 }
-.section_feedback .feedback_text .feedback_description {
+.section_feedback .feedback_text .feedback_subheading {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: #EFE7E2;
   max-width: 350px;
+}
+
+.cards_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 120px;
+}
+.cards_container .card_item {
+  padding-bottom: 35px;
+}
+.cards_container .card_img {
+  max-width: 280px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.cards_container .card_title {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+.cards_container .card_text {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.cards_container .card_link {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: blue;
+}
+
+.section_price {
+  background-color: deeppink;
+}
+.section_price .price_wrapper {
+  padding-top: 120px;
+}
+.section_price .price_wrapper .price_text {
+  max-width: 580px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section_price .price_wrapper .price_text .price_title {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: #FFFFFF;
+  padding-bottom: 24px;
+}
+.section_price .price_wrapper .price_text .price_subheading {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #EFE7E2;
+}
+.section_price .price_wrapper .card_price_title {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: #EFE7E2;
+  margin-bottom: 20px;
+}
+.section_price .price_wrapper .pricing_list {
+  border-right: 1px solid #B7AAA2;
+  display: flex;
+  flex-direction: column;
+}
+.section_price .price_wrapper .pricing_list .list_item {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #EFE7E2;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.section_price .price_wrapper .pricing_list .time {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #B7AAA2;
+}
+.section_price .price_wrapper .pricing_list .price {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
 }
