@@ -11,6 +11,10 @@
 }
 .logo_wrapper .logo {
   display: flex;
+  transition: all 0.5s ease;
+}
+.logo_wrapper .logo:hover {
+  transform: scale(0.9);
 }
 .logo_wrapper .logo_img {
   max-width: 45px;
@@ -39,6 +43,10 @@
 .nav_list .nav_item {
   gap: 15px;
   align-self: center;
+  transition: all 0.5s ease;
+}
+.nav_list .nav_item:hover {
+  transform: scale(1.2);
 }
 .nav_list .link_item {
   color: #EFE7E2;
@@ -222,15 +230,15 @@
 
 .about_images {
   grid-template-columns: repeat(4, 280px);
-  grid-template-rows: repeat(2, 337px);
+  grid-template-rows: 280px 37px 280px;
 }
 
 .item:nth-child(1) {
-  grid-row: 1/2;
+  grid-row: 1/3;
   grid-column: 1/3;
 }
 .item:nth-child(6) {
-  grid-row: 2/3;
+  grid-row: 2/5;
   grid-column: 3/5;
 }
 
@@ -313,7 +321,6 @@
 }
 .cards_container .card_text {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
@@ -321,7 +328,6 @@
 }
 .cards_container .card_link {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: blue;
@@ -332,6 +338,7 @@
 }
 .section_price .price_wrapper {
   padding-top: 120px;
+  padding-bottom: 145px;
 }
 .section_price .price_wrapper .price_text {
   max-width: 580px;
@@ -354,6 +361,9 @@
   line-height: 24px;
   color: #EFE7E2;
 }
+.section_price .price_wrapper .card_item_price {
+  margin-bottom: 20px;
+}
 .section_price .price_wrapper .card_price_title {
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
@@ -373,15 +383,24 @@
   font-size: 16px;
   line-height: 28px;
   color: #EFE7E2;
+  display: flex;
+}
+.section_price .price_wrapper .pricing_list .list_item:not(:last-child) {
   margin-bottom: 10px;
-  display: inline-block;
+}
+.section_price .price_wrapper .pricing_list .services {
+  width: 70%;
+  max-width: 280px;
+}
+.section_price .price_wrapper .pricing_list .price_work {
+  width: 30%;
 }
 .section_price .price_wrapper .pricing_list .time {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #B7AAA2;
+  padding-right: 5px;
 }
 .section_price .price_wrapper .pricing_list .price {
   font-family: "Fira Sans", sans-serif;
@@ -389,4 +408,259 @@
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+  width: 28px;
+  letter-spacing: 0.1em;
+}
+
+.form {
+  margin-top: -145px;
+  background-color: #FF6E40;
+  text-align: center;
+}
+.form .form_title {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 48px;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+.form .form_subheading {
+  font-family: "Fira Sans";
+  font-size: 21px;
+  line-height: 30px;
+  color: #3B322D;
+  padding-bottom: 35px;
+}
+.form .form_input {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  padding-bottom: 24px;
+}
+.form .input {
+  border: none;
+  width: 323px;
+  height: 68px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #FF6E40;
+  outline: 1px solid #000000;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.form .input::placeholder {
+  color: #FFFFFF;
+}
+.form .button {
+  padding: 18px 50px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  border: none;
+  background: #000000;
+  cursor: pointer;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+.form .terms {
+  padding-bottom: 68px;
+}
+.form .checkbox_wrapper {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+.form .checkbox_wrapper .terms_text {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  color: #EFE7E2;
+}
+.form .checkbox_wrapper .terms_text .terms_link {
+  text-decoration: underline;
+}
+.form .checkbox_wrapper:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.form .checkbox_wrapper .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form .checkbox_wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form .checkbox_wrapper input:checked ~ .checkmark {
+  background-color: #000000;
+}
+.form .checkbox_wrapper input:checked ~ .checkmark::after {
+  display: block;
+}
+.form .checkbox_wrapper .checkmark {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+}
+.form .checkbox_wrapper .checkmark::after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.section_contacts {
+  margin-top: 120px;
+}
+.section_contacts .mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 650px;
+}
+.section_contacts .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 650px;
+}
+.section_contacts .gmap_iframe {
+  height: 650px !important;
+  width: 100%;
+}
+.section_contacts .contacts {
+  position: absolute;
+  background-color: chartreuse;
+  text-align: left;
+  max-width: 480px;
+  top: 10%;
+  left: 19%;
+}
+.section_contacts .contacts .contacts_title {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: #FFFFFF;
+  margin: 65px auto 34px 57px;
+}
+.section_contacts .contacts .contacts_list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+.section_contacts .contacts .contacts_list .link {
+  align-items: center;
+}
+.section_contacts .contacts .contacts_list .icon-phone {
+  background: #FF6E40;
+  border-radius: 30px;
+  width: 54px;
+  height: 54px;
+  position: relative;
+  color: #000000;
+  margin-right: 30px;
+}
+.section_contacts .contacts .contacts_list .icon-phone::before {
+  position: absolute;
+  top: 29%;
+  left: 30%;
+}
+.section_contacts .contacts .contacts_list .icon-envelope {
+  background: #FF6E40;
+  border-radius: 30px;
+  width: 54px;
+  height: 54px;
+  position: relative;
+  color: #000000;
+  margin-right: 30px;
+}
+.section_contacts .contacts .contacts_list .icon-envelope::before {
+  position: absolute;
+  top: 31%;
+  left: 30%;
+}
+.section_contacts .contacts .contacts_list .icon-location {
+  background: #FF6E40;
+  border-radius: 30px;
+  width: 54px;
+  height: 54px;
+  position: relative;
+  color: #000000;
+  margin-right: 30px;
+}
+.section_contacts .contacts .contacts_list .icon-location::before {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+.section_contacts .contacts .contacts_list .icon-clock2 {
+  background: #FF6E40;
+  border-radius: 30px;
+  width: 54px;
+  height: 54px;
+  position: relative;
+  color: #000000;
+  margin-right: 30px;
+}
+.section_contacts .contacts .contacts_list .icon-clock2::before {
+  position: absolute;
+  top: 31%;
+  left: 31%;
+}
+.section_contacts .contacts .contacts_list .link_item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-left: 57px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.section_contacts .contacts .contacts_list .link_item:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  background: #251D1A;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.footer .footer_text {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.footer .footer_links {
+  background-color: #000000;
+  padding-top: 41px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer_link {
+  text-decoration: underline;
+}
+.footer .second_par {
+  padding-top: 15px;
 }
