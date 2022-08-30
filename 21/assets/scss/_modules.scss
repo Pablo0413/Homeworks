@@ -20,10 +20,28 @@ $gray: #EFE7E2;
 
 @mixin subheading {
     font-family: 'Fira Sans', sans-serif;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 24px;
-        color: $gray;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $gray;
+}
+
+@mixin footer_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: $title_color;
+    text-align: center;
+}
+
+@mixin icon {
+    background: $orange;
+    border-radius: 30px;
+    width: 54px;
+    height: 54px;
+    position: relative;
+    color: #000000;
+    margin-right: 30px;
 }
 
 .header_block {
@@ -377,7 +395,6 @@ $gray: #EFE7E2;
     }
     .card_text {
         font-family: 'Fira Sans', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         color: $title_color;
@@ -385,7 +402,6 @@ $gray: #EFE7E2;
     }
     .card_link {
         font-family: 'Fira Sans', sans-serif;
-        font-weight: 400;
         font-size: 14px;
         line-height: 19px;
         color: blue;
@@ -450,7 +466,6 @@ $gray: #EFE7E2;
           }
           .time {
             font-family: 'Fira Sans', sans-serif;
-            font-weight: 400;
             font-size: 14px;
             line-height: 24px;
             color: #B7AAA2;
@@ -477,7 +492,7 @@ $gray: #EFE7E2;
     background-color: $orange;
     text-align: center;
     .form_title {
-        font-family: 'Playfair Display';
+        font-family: 'Playfair Display', sans-serif;
         font-weight: 900;
         font-size: 36px;
         line-height: 48px;
@@ -544,7 +559,6 @@ $gray: #EFE7E2;
 
         .terms_text {
             font-family: 'Fira Sans', sans-serif;
-            font-weight: 400;
             font-size: 13px;
             line-height: 17px;
             color: #EFE7E2;
@@ -649,13 +663,7 @@ $gray: #EFE7E2;
             }
 
             .icon-phone {
-                background: $orange;
-                border-radius: 30px;
-                width: 54px;
-                height: 54px;
-                position: relative;
-                color: #000000;
-                margin-right: 30px;
+                @include icon;
         
                 &::before {
                     position: absolute;
@@ -665,13 +673,7 @@ $gray: #EFE7E2;
                 }
             }
             .icon-envelope {
-                background: $orange;
-                border-radius: 30px;
-                width: 54px;
-                height: 54px;
-                position: relative;
-                color: #000000;
-                margin-right: 30px;
+                @include icon;
                 
                 &::before {
                     position: absolute;
@@ -681,13 +683,7 @@ $gray: #EFE7E2;
                 }
             }
             .icon-location {
-                background: $orange;
-                border-radius: 30px;
-                width: 54px;
-                height: 54px;
-                position: relative;
-                color: #000000;
-                margin-right: 30px;
+                @include icon;
 
                 &::before {
                     position: absolute;
@@ -697,13 +693,7 @@ $gray: #EFE7E2;
                 }
             }
             .icon-clock2 {
-                background: $orange;
-                border-radius: 30px;
-                width: 54px;
-                height: 54px;
-                position: relative;
-                color: #000000;
-                margin-right: 30px;
+                @include icon;
         
                 &::before {
                     position: absolute;
@@ -713,7 +703,7 @@ $gray: #EFE7E2;
                 }
             }
             .link_item {
-                font-family: 'Montserrat';
+                font-family: 'Montserrat', sans-serif;
                 font-size: 21px;
                 line-height: 30px;
                 color: $title_color;
@@ -721,9 +711,10 @@ $gray: #EFE7E2;
                 display: flex;
                 align-items: center;
                 transition: all 0.5s ease;
-        &:hover {
-            transform: scale(1.1);
-        }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
             
         }
@@ -731,11 +722,7 @@ $gray: #EFE7E2;
 }
 .footer {
     background: #251D1A;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    line-height: 16px;
-    color: $title_color;
-    text-align: center;
+    @include footer_text;
     
     .footer_text {
         padding-top: 56px;

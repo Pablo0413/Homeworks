@@ -321,7 +321,6 @@
 }
 .cards_container .card_text {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
@@ -329,7 +328,6 @@
 }
 .cards_container .card_link {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: blue;
@@ -399,7 +397,6 @@
 }
 .section_price .price_wrapper .pricing_list .time {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #B7AAA2;
@@ -421,7 +418,7 @@
   text-align: center;
 }
 .form .form_title {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", sans-serif;
   font-weight: 900;
   font-size: 36px;
   line-height: 48px;
@@ -482,7 +479,6 @@
 }
 .form .checkbox_wrapper .terms_text {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
   font-size: 13px;
   line-height: 17px;
   color: #EFE7E2;
@@ -630,7 +626,7 @@
   left: 31%;
 }
 .section_contacts .contacts .contacts_list .link_item {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 21px;
   line-height: 30px;
   color: #FFFFFF;
