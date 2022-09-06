@@ -24,8 +24,10 @@ let priceOfChocolate = +prompt('Enter price of chocolate bar');
 alert(`You can buy ${Math.trunc(availableCash / priceOfChocolate)} chocolate bar, your balance will contain ${availableCash % priceOfChocolate}`);
 
 // Normalize 2
-let value = +prompt('Enter a three-digit number ');
-alert((``))
+let value = prompt('Enter a three-digit number ');
+let reverseValue = Array.from(value).reverse(3).join('');
+
+console.log(reverseValue)
 
 
 // maximum 2 

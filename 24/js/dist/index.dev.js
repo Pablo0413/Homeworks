@@ -23,8 +23,9 @@ var availableCash = +prompt('Enter your available cash');
 var priceOfChocolate = +prompt('Enter price of chocolate bar');
 alert("You can buy ".concat(Math.trunc(availableCash / priceOfChocolate), " chocolate bar, your balance will contain ").concat(availableCash % priceOfChocolate)); // Normalize 2
 
-var value = +prompt('Enter a three-digit number ');
-alert(""); // maximum 2 
+var value = prompt('Enter a three-digit number ');
+var reverseValue = Array.from(value).reverse(3).join('');
+console.log(reverseValue); // maximum 2 
 
 var sum = +prompt('Enter the amount of money');
 var yearDeposit = 5;
