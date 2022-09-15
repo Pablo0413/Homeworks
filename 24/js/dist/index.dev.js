@@ -21,11 +21,27 @@ if (inputSize && inputSize > 0) {
 
 var availableCash = +prompt('Enter your available cash');
 var priceOfChocolate = +prompt('Enter price of chocolate bar');
-alert("You can buy ".concat(Math.trunc(availableCash / priceOfChocolate), " chocolate bar, your balance will contain ").concat(availableCash % priceOfChocolate)); // Normalize 2
+alert("You can buy ".concat(Math.trunc(availableCash / priceOfChocolate), " chocolate bar, your balance will contain ").concat(availableCash % priceOfChocolate)); // Normalize 2.1
+// let value = prompt('Enter a three-digit number ');
+// let reverseValue = Array.from(value).reverse(3).join('');
+// // Пройдемось по методах, метод Array.from(value), створюємо новий так сказати масив з введеного значення, розділений на три елемента
+// // метод reverse(3), змінює саме порядок відображення цих елементів масиву, задом наперед 
+// // метод join('') виконує об'єднання всіх елементів масиву, але є мінус що у строку :(
+// console.log(reverseValue)
+// console.log(typeof reverseValue)
+// Normalize 2.2 варіант 
 
-var value = prompt('Enter a three-digit number ');
-var reverseValue = Array.from(value).reverse(3).join('');
-console.log(reverseValue); // maximum 2 
+var num = +prompt("Enter a three-digit number:");
+var reverseNumber = '';
+var lastDigitOfNumber;
+
+while (num != 0) {
+  lastDigitOfNumber = num % 10;
+  reverseNumber = reverseNumber + lastDigitOfNumber;
+  num = Math.floor(num / 10);
+}
+
+alert(reverseNumber); // maximum 2 
 
 var sum = +prompt('Enter the amount of money');
 var yearDeposit = 5;

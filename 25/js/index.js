@@ -118,6 +118,8 @@ if (number && number > 0 && number.toString().length === 5) {
 
     // в цьому випадку дізнався що спліт розділяє строку на масив
 
+    // 
+
     (number === reverseNumber) ? alert('ВВедене число є паліндромом') : alert('Введене число не є паліндромом');
 } else incorrectInputData();
 
@@ -154,6 +156,7 @@ i = 0;
 
 do {
     userToChoose = confirm(dayOfWeek[i] + ', Do you want to see the next day?');
+    // при натисканні ок наш цикл продовжується до того моменту коли ми не нажмемо cancel
     i ++; 
     if (i > 6) i = 0;
 } while (userToChoose)
