@@ -72,7 +72,7 @@ console.log(myShoppingList);
 */
 
 function newProductList(productName) {
-  // filter створює новий масив з усіма елементами, яку проходять певну перевірку, яка задається у функції
+  // filter створює новий масив з усіма елементами, які проходять певну перевірку, яка задається у функції
   return myShoppingList.filter(function (element) {
     return element.productName !== productName;
   });
@@ -102,11 +102,11 @@ function addingToShoppingList(newProduct) {
 }
 
 var newProduct = {
-  productName: "Apple Home",
+  productName: 'Apple Watch Series 8',
   quantity: 1,
-  isbought: true,
-  price: 39.00,
-  amountPrice: 39.00
+  isbought: false,
+  price: 399.45,
+  amountPrice: 399.45
 };
 addingToShoppingList(newProduct);
 console.log(myShoppingList);
@@ -118,4 +118,73 @@ newProduct = {
   amountPrice: 450
 };
 addingToShoppingList(newProduct);
-console.log(myShoppingList);
+console.log(myShoppingList); // Max 1 Підрахунок суми всіх продуктів (враховуючи кількість кожного) в списку.
+
+function sum(allProducts) {
+  var a = 0;
+  allProducts.forEach(function (element) {
+    a += element.quantity * element.price;
+  });
+  return a;
+}
+
+var sumOfAllProducts = sum(myShoppingList);
+console.log(Math.trunc(sumOfAllProducts)); // Max 2 Підрахунок суми всіх (не) придбаних продуктів.
+
+function sumOfNotBought(allProducts) {
+  var a = 0;
+  allProducts.forEach(function (element) {
+    if (!element.isbought) {
+      a += element.quantity * element.price;
+    }
+  });
+  return a;
+}
+
+var allNotBoughtProducts = sumOfNotBought(myShoppingList);
+console.log(allNotBoughtProducts); // max 3 Показання продуктів в залежності від суми, (від більшого до меншого / від меншого до більшого, в залежності від параметра функції, який вона приймає)
+
+var DisplaySortedList = [{
+  productName: 'Iphone 14 Pro Max',
+  quantity: 1,
+  isbought: true,
+  price: 1099.99,
+  amountPrice: 1099.99
+}, {
+  productName: 'AirPods 2',
+  quantity: 2,
+  isbought: true,
+  price: 149.35,
+  amountPrice: 298.70
+}, {
+  productName: 'MacBook Air M2 chip',
+  quantity: 1,
+  isbought: false,
+  price: 1199.99,
+  amountPrice: 1199.99
+}, {
+  productName: 'Apple Watch Series 8',
+  quantity: 1,
+  isbought: false,
+  price: 399.45,
+  amountPrice: 399.45
+}, {
+  productName: 'MagSafe Charger',
+  quantity: 4,
+  isbought: true,
+  price: 39.00,
+  amountPrice: 156.00
+}];
+
+function displayFromLess(a, b) {
+  return a.amountPrice - b.amountPrice;
+}
+
+function displayFromBig(a, b) {
+  return b.amountPrice - a.amountPrice;
+} // DisplaySortedList.sort(displayFromBig); Від більшого до меншого.
+// console.log(DisplaySortedList)
+
+
+DisplaySortedList.sort(displayFromLess);
+console.log(DisplaySortedList);
