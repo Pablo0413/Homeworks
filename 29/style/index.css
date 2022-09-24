@@ -1,0 +1,101 @@
+.modal_window {
+    position: fixed;
+    width: 400px;
+    height: 350px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-image: url(./921c9ef3c52069eea4729d9530a0267051c6c622v2_00.jpg);
+}
+.text {
+    color: rgb(255, 238, 0);
+    font-weight: 700;
+}
+
+.close_window {
+    display: block;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: chartreuse;
+    border: none;
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+
+}
+
+.open_window {
+    display: block;
+    margin: 0 auto;
+    background-color: darkmagenta;
+    border: none;
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: khaki;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+.modal_window.open{
+    display: block;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(0, 38, 43);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+    height: 200px;
+    width: 70px;
+    margin-top: 450px;
+    margin-bottom: 25px;
+}
+
+.light {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+
+.light.red {
+    background-color: crimson;
+    box-shadow: crimson 0px 1px 10px;
+}
+
+.light.yellow {
+    background-color: rgb(231, 231, 0);
+    box-shadow: 0px 1px 10px rgb(231, 231, 0);
+}
+
+.light.green {
+    background-color: rgb(25, 230, 52);
+    box-shadow: 0px 1px 10px rgb(231, 231, 0);
+}
+
+.change_color {
+    background-color: dodgerblue;
+    color: rgb(68, 2, 131);
+    border: none;
+    border-radius: 12px;
+    width: 140px;
+    cursor: pointer;
+    height: 30px;
+}
