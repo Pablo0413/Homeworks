@@ -48,7 +48,7 @@ document.addEventListener('keydown', function (ev) {
  */
 
 // шкала любові якщо більше число, більша любов.
-
+// не зміг реалізувати сортування, хотів би твоєї допомоги, запитаю у пятницю
 const loveRating = [
     {
         name: 'Sasuke',
