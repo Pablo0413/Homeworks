@@ -37,17 +37,58 @@ document.addEventListener('keydown', function (ev) {
 При кліку на заголовок стовпця, необхідно відсортувати дані цього стовпця. 
 Врахуй, що числові значення повинні сортуватися як числа, а не як рядки.
  */
-// let NarutoList = [
-//     {
-//         number: 1,
-//         name: 'Naruto Uzumaki',
-//     },
-//     {
-//         number: 1,
-//         name: 'Naruto Uzumaki',
-//     }
-// ];
+// шкала любові якщо більше число, більша любов.
 
+var loveRating = [{
+  name: 'Sasuke',
+  rating: 15
+}, {
+  name: 'Naruto',
+  rating: 22222222222
+}, {
+  name: 'Sakura',
+  rating: 1
+}, {
+  name: 'Shikamaru',
+  rating: 1111111
+}, {
+  name: 'Hinata',
+  rating: 213123312123
+}, {
+  name: 'Boruto',
+  rating: 0
+}, {
+  name: 'Jiraya',
+  rating: 10000000000111
+}, {
+  name: 'Tsunade',
+  rating: 2222222222222222
+}];
+var listTable = document.querySelector('.table');
+
+function generateTable() {
+  loveRating.forEach(function (el) {
+    var div = document.createElement('div');
+    div.classList.add('column');
+    var nameString = document.createElement('span');
+    var ratingNumber = document.createElement('span');
+    nameString.textContent = el.name;
+    ratingNumber.textContent = el.rating;
+    div.append(nameString);
+    div.append(ratingNumber);
+    document.querySelector('.table').append(div);
+  });
+}
+
+var sortColumn = document.querySelectorAll('.sorting_column');
+sortColumn.forEach(function (el) {
+  el.addEventListener('click', function (ev) {
+    var targetItem = ev.target;
+    var sortKey = targetItem.dataset.sort;
+    console.log(targetItem);
+  });
+});
+generateTable();
 /*Створити HTML-сторінку з блоком тексту в рамці. 
 Реалізувати можливість змінювати розмір блоку, 
 якщо затиснути мишку в правому нижньому кутку і тягнути її далі.

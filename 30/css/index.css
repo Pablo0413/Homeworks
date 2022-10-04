@@ -22,6 +22,25 @@ body {
     
 }
 
+.table {
+    margin: 100px auto;
+    width: 450px;
+    border-radius: 20px;
+}
+
+.column {
+    background-color: darkgoldenrod;
+    display: flex;
+}
+
+.column span {
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    border: 1px solid yellowgreen;
+}
+
 .resize_block {
     margin: 100px auto;
     position: relative;

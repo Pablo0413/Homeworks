@@ -47,16 +47,76 @@ document.addEventListener('keydown', function (ev) {
 Врахуй, що числові значення повинні сортуватися як числа, а не як рядки.
  */
 
-// let NarutoList = [
-//     {
-//         number: 1,
-//         name: 'Naruto Uzumaki',
-//     },
-//     {
-//         number: 1,
-//         name: 'Naruto Uzumaki',
-//     }
-// ];
+// шкала любові якщо більше число, більша любов.
+
+const loveRating = [
+    {
+        name: 'Sasuke',
+        rating: 15,
+    },
+    {
+        name: 'Naruto',
+        rating: 22222222222, 
+    },
+    {
+        name: 'Sakura',
+        rating: 1, 
+    },
+    {
+        name: 'Shikamaru',
+        rating: 1111111, 
+    },
+    {
+        name: 'Hinata',
+        rating: 213123312123, 
+    },
+    {
+        name: 'Boruto',
+        rating: 0, 
+    },
+    {
+        name: 'Jiraya',
+        rating: 10000000000111, 
+    },
+    {
+        name: 'Tsunade',
+        rating: 2222222222222222, 
+    },
+]
+
+const listTable = document.querySelector('.table')
+
+function generateTable() {
+    loveRating.forEach(el => {
+        const div = document.createElement('div');
+        div.classList.add('column');
+
+        const nameString = document.createElement('span')
+        const ratingNumber = document.createElement('span')
+
+        nameString.textContent = el.name;
+        ratingNumber.textContent = el.rating;
+
+        div.append(nameString);
+        div.append(ratingNumber);
+
+        document.querySelector('.table').append(div);
+    })
+}
+
+
+
+const sortColumn = document.querySelectorAll('.sorting_column');
+
+sortColumn.forEach(el => {
+    el.addEventListener('click', function(ev) {
+        const targetItem = ev.target;
+        const sortKey = targetItem.dataset.sort;
+        console.log(targetItem)
+    })
+});
+
+generateTable();
 
 /*Створити HTML-сторінку з блоком тексту в рамці. 
 Реалізувати можливість змінювати розмір блоку, 
