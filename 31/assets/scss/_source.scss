@@ -1,0 +1,214 @@
+$bgcolor: #6c13a7;
+$gold: #FFDD3F;
+
+.main {
+    font-family: 'Lato', sans-serif;
+    background-color: $bgcolor;
+    color: #ffffff;
+}
+
+.game_container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.game_background {
+    background: url(../img/Dotawallpaper.webp) no-repeat;
+    background-size: cover;
+}
+
+.game_info {
+    padding: 154px 200px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 50px;
+    background-color: $bgcolor;
+}
+
+.tab_icon {
+    display: block;
+    padding-bottom: 15px;
+
+}
+
+.tab_name {
+    text-transform: uppercase;
+    color: #8D91A3;
+    transition: all 0.5s ease;
+}
+
+#info_icon path, #spades_icon path, #bag_icon path, #star_icon path {
+    transition: all 0.5s ease;
+}
+
+.tab_item {
+    text-align: center;
+    cursor: pointer;
+
+    .tab_name {
+        font-size: 16px; 
+        line-height: 28px;
+    }
+
+    &:hover, &.tab-item--active {
+        .tab_icon {
+            #info_icon path, #spades_icon path {
+                stroke: white;
+            }
+
+            #bag_icon path {
+                fill: white;
+            }
+        }
+        
+        .tab_name {
+            color: white;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.card {
+    padding: 60px 40px;
+    background-color: #542773;
+}
+
+.card_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info_img_content {
+    position: relative;
+    width: 160px;
+    margin-bottom: 25px;
+
+    &::before{
+        content: '';
+        display: block;
+    }
+}
+
+
+.info_img__rating {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .star_icon:hover, .star_icon.star_icon--active {
+        cursor: pointer;
+
+        path {
+            fill: $gold;
+        }
+    }
+
+    .star_icon:not(.star_icon:last-of-type) {
+        margin-right: 10px;
+    }
+}
+
+.info_text {
+    max-width: 320px;
+    width: 100%;
+    position: relative;
+
+    .card_title {
+        font-size: 32px;
+        line-height: 32px;
+        padding-bottom: 15px;
+    }
+
+    .release_date {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 40px;
+    }
+
+    .card_description {
+        color: #B7BACD;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 30px;
+        max-width: 275px;
+        width: 100%;
+    }
+
+    .card_pricing {
+        display: flex;
+    }
+    .card_amount {
+        margin-right: 25px;
+
+        .amount_discount{
+            display: block;
+            font-size: 12px;
+            line-height: 20px;
+            color: $gold;
+            margin-bottom: 5px;
+        }
+        .amount_price {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    .button_to_play {
+        padding: 20px 20px;
+        background: #13E28D;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        border: 1px solid #13E28D;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:hover {
+            border: 1px solid #ffffff;
+            transform: scale(0.9);
+            font-size: 14px;
+        }
+    }
+}
+
+
+.tab_wrapper {
+    height: 312px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase; 
+}
+
+.score {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 83px;
+    height: 83px;
+
+    .count {
+        font-size: 20px;
+        line-height: 22px;
+        color: #B7BACD;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        canvas { 
+            position: absolute;
+            top: -10px;
+            right: -10px
+        }
+    }
+}
