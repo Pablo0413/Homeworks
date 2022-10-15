@@ -1,0 +1,102 @@
+.header::before{
+    @include bg_image;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/mask_hero.png);
+}
+
+
+.news_section::before{
+    @include bg_image;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/news_mask.png);
+    margin-top: 388px;
+    overflow: hidden;
+}
+
+.footer::before{
+    @include bg_image;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/footer_mask.png);
+
+}
+
+.active, .nav_item:hover{
+    .circle{
+        background: #ffffff;
+    }
+}
+
+.icon {
+    &::before{
+        position: absolute;
+        top: 30%;
+        right: 30%;
+    }
+    &:hover{
+        transform: scale(0.9);
+    }
+}
+
+.arrow {
+    &::before{
+        position: absolute;
+        content: '';
+        top: -15px;
+        left: -14px;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 19px;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+    }
+}
+
+.arrow-prev, .arrow-next, .button {
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.title_section::before{
+    content: '';
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    border: 1px solid #2c4058;
+    background: #000;
+
+}
+
+.news_section .title_section::before{
+    content: '';
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.card {
+    &:hover{
+        transform: scale(0.9);
+    }
+}

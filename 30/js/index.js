@@ -101,6 +101,7 @@ function generateTable() {
         div.append(ratingNumber);
 
         document.querySelector('.table').append(div);
+        
     })
 }
 
@@ -113,6 +114,7 @@ sortColumn.forEach(el => {
         const targetItem = ev.target;
         const sortKey = targetItem.dataset.sort;
         console.log(targetItem)
+        
     })
 });
 
