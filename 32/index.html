@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./assets/img/naruto-icon.svg">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+    <link rel="stylesheet" href="./assets/source/lightbox.css">
+    <link rel="stylesheet" href="./assets/source/index.css">
+    <title>Monticello</title>
+</head>
+<body>
+    <header class="header main_bg">
+        <div class="navigation container flex_row">
+            <a href="#" id="about_us" class="logo">
+                <img src="./assets/img/Logo.svg" alt="Logo image">
+            </a>
+            <nav class="navbar flex_row">
+                <ul class="nav_list">
+                    <li>
+                        <a class="nav_item" href="#about_us">
+                            <span class="circle"></span>
+                            about us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav_item" href="#project">
+                            <span class="circle"></span>
+                            projects
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav_item" href="#news">
+                            <span class="circle"></span>
+                            news
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav_item" href="#contact">
+                            <span class="circle"></span>
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="social_links">
+                <a href="#contact">
+                    <i class="icon icon-facebook"></i>
+                </a>
+                <a href="#contact">
+                    <i class="icon icon-twitter"></i>
+                </a>
+                <a href="#contact">
+                    <i class="icon icon-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero_slider">
+            <div class="hero_wrapper">
+                <h2 class="title">naruto</h2>
+                <p class="subtitle">somebody told me i'm a failure, I'll prove them wrong</p>
+            </div>
+            <div class="hero_wrapper">
+                <h2 class="title">hatake kakashi</h2>
+                <p class="subtitle">those who don't treasure their friends are worse than trash!</p>
+            </div>
+            <div class="hero_wrapper">
+                <h2 class="title">yahiko</h2>
+                <p class="subtitle">if you just keep crying nothing will happen. just like the rain</p>
+            </div>
+            <div class="hero_wrapper">
+                <h2 class="title">shisui</h2>
+                <p class="subtitle">you're good at fooling yourself. That's why you can't grasp your true feelings...</p>
+            </div>
+            <div class="hero_wrapper">
+                <h2 class="title">simple & modern</h2>
+                <p class="subtitle">we make the world beautiful everyday</p>
+            </div>
+        </div>
+        <a href="#project">
+            <i class="arrow"></i>
+        </a>
+    </header>
+
+    <section class="project_section" id="project">
+        <h3 class="title_section">what we do</h3>
+        <div class="trade_block container flex_row">
+            <div class="image_project">
+                <span class="bg_color_blue"></span>
+                <img src="./assets/img/Mask Group.jpg" class="img_trade" alt="First Trade image" >
+            </div>
+            <div class="project_info">
+                <span class="project_subtitle">one world</span>
+                <h4 class="project_title">trade center</h4>
+                <p class="project_description">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
+                <a href="#gallery" class="button">more details</a>
+                <a class="destination" href="https://www.google.com/maps/search/New+York+City,+United+States+-+1776+feet/@40.7304853,-74.1349399,11z/data=!3m1!4b1" target="_blank">
+                    <i class="icon-location"></i>
+                    <p class="address">New York City, United States - 1776 feet</p>
+                </a>
+            </div>
+        </div>
+        <div class="commerce_block container flex_row">
+            <div class="project_info">
+                <span class="project_subtitle">international</span>
+                <h4 class="project_title">commerce center</h4>
+                <p class="project_description">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
+                <a href="#gallery" class="button">more details</a>
+                <a class="destination" href="https://goo.gl/maps/xUzdKZX9CfQhFWFWA" target="_blank">
+                    <i class="icon-location"></i>
+                    <p class="address">Hong Kong - 1588 feet</p>
+                </a>
+            </div>
+            <div class="image_project">
+                <span class="bg_color_violet"></span>
+                <img src="./assets/img/Mask Group2.jpg" class="img_trade" alt="Second Trade image" >
+            </div>
+        </div>
+    </section>
+
+    <section class="news_section" id="news">
+        <h3 class="title_section">latest news</h3>
+        <div class="news_wrapper flex_row">
+            <a href="#" class="card first_card">
+                <img src="./assets/img/Image_card1.jpg" alt="">
+                <div class="card_content">
+                    <h5 class="card_title">see the unmatched beauty of the great.</h5>
+                    <p class="card_text">Free directories: directories are perfect for customers that are searching for...</p>
+                    <div class="person_content">
+                        <img src="./assets/img/" class="avatar" alt="Alja img">
+                        <div class="name_block">
+                            <h6 class="name">Alja brun</h6>
+                            <span class="date">20 Jan 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card second_card">
+                <img src="./assets/img/image_card2.jpg" alt="">
+                <div class="card_content">
+                    <h5 class="card_title">Effective Effective advertising pointers.</h5>
+                    <p class="card_text">Having a home based business is a wonderful asset to your life...</p>
+                    <div class="person_content">
+                        <img src="./assets/img/" class="avatar" alt="Alja img">
+                        <div class="name_block">
+                            <h6 class="name">Dominic freeman</h6>
+                            <span class="date">13 Dec 2019</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card third_card">
+                <img src="./assets/img/Image3.jpg" alt="">
+                <div class="card_content">
+                    <h5 class="card_title">Hypnotize yourself into the ghost.</h5>
+                    <p class="card_text">There are many things that are important to catalog design...</p>
+                    <div class="person_content">
+                        <img src="./assets/img/" class="avatar" alt="Alja img">
+                        <div class="name_block">
+                            <h6 class="name">Alice Ward</h6>
+                            <span class="date">30 Nov 2019</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card fourth_card">
+                <img src="./assets/img/Image_card1.jpg" alt="">
+                <div class="card_content">
+                    <h5 class="card_title">Hypnotize yourself into the ghost.</h5>
+                    <p class="card_text">There are many things that are important to catalog design...</p>
+                    <div class="person_content">
+                        <img src="./assets/img/" class="avatar" alt="Alja img">
+                        <div class="name_block">
+                            <h6 class="name">Obito</h6>
+                            <span class="date">30 Nov 2019</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card fifth_card">
+                <img src="./assets/img/Image3.jpg" alt="">
+                <div class="card_content">
+                    <h5 class="card_title">Hypnotize yourself into the ghost.</h5>
+                    <p class="card_text">There are many things that are important to catalog design...</p>
+                    <div class="person_content">
+                        <img src="./assets/img/" class="avatar" alt="Alja img">
+                        <div class="name_block">
+                            <h6 class="name">Alice Ward</h6>
+                            <span class="date">30 Nov 2019</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="gallery_section" id="gallery">
+        <div class="gallery_wrapper container">
+            <h3 class="title_section">gallery</h3>
+            <div class="img_gallery container">
+                <a class="grid_img" href="./assets/img/scott-webb-176434 1.jpg" data-lightbox="roadtrip"><img src="./assets/img/scott-webb-176434 1.jpg" alt=""></a>
+                <a class="grid_img" href="./assets/img/photos-13323p6Bdc0uhr8Bq 1.jpg" data-lightbox="roadtrip"><img src="./assets/img/photos-13323p6Bdc0uhr8Bq 1.jpg" alt=""></a>
+                <a class="grid_img" href="./assets/img/echo-grid-156713 1.jpg" data-lightbox="roadtrip"><img src="./assets/img/echo-grid-156713 1.jpg" alt=""></a>
+                <a class="grid_img" href="./assets/img/fuse-brussels-169216 1.jpg" data-lightbox="roadtrip"><img src="./assets/img/fuse-brussels-169216 1.jpg" alt=""></a>
+                <a class="grid_img" href="./assets/img/tu-tram-pham-202263 2.jpg" data-lightbox="roadtrip"><img src="./assets/img/tu-tram-pham-202263 2.jpg" alt=""></a>
+            </div>
+            <a href="#" class="button btn_gallery">see more</a>
+        </div>
+    </section>
+
+
+    <section class="map_section">
+        <div class="map_wrapper">
+            <div id="map">
+                <iframe src="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact_section" id="contact">
+        <div class="contact_content flex_row">
+            <div class="modal_wrapper">
+                <h3 class="title_section">get in touch</h3>
+                <div class="modal_window flex_row"> 
+                    <div class="contact_wrapper">
+                        <a href="#" class="address">
+                            <i class="icon_contact icon-location"></i>
+                            <span class="address_input">91 Nolan Extensions Suite 670</span>
+                        </a>
+                        <a class="phone" href="tel:+001 356-868-2454">
+                            <i class="icon_contact icon-phone"></i>
+                            <span class="phone_input">+001 356-868-2454</span>
+                        </a>
+                        <a class="e_mail" href="mailto:montichello@service.com">
+                            <i class="icon_contact icon-drawer2"></i>
+                            <span class="mail_input">montichello@service.com</span>
+                        </a>
+                        <a class="worktime" href="#">
+                            <i class="icon_contact icon-clock"></i>
+                            <span class="worktime_input">From 07:05AM to 19:30PM</span>
+                        </a>
+                    </div>
+                    <form class="form">
+                        <div class="group">
+                            <input type="text" class="input" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Mollie Medina</label>
+                        </div>
+                        <div class="group">
+                            <input type="email" class="input" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Email</label>
+                        </div>
+                        <input class="button button_form" value="sumbut">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="nav_footer flex_row">
+            <div class="logo_footer">
+                <a href="#">
+                    <img src="./assets/img/Logo.svg" alt="Logo footer" class="logo">
+                </a>
+                <span class="copyright">Copyrights © 2020 Montichello</span>
+            </div>
+            <div class="social_links">
+                <a href="#contact">
+                    <i class="icon icon-facebook"></i>
+                </a>
+                <a href="#contact">
+                    <i class="icon icon-twitter"></i>
+                </a>
+                <a href="#contact">
+                    <i class="icon icon-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/dist/lightbox-plus-jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
