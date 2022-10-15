@@ -609,15 +609,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
     @include hero_subtitle_styles;
 }
 
-.input:focus ~ .highlight {
-    -webkit-animation:inputHighlighter 0.3s ease;
-    -moz-animation:inputHighlighter 0.3s ease;
-    animation:inputHighlighter 0.3s ease;
-}
-// animation
-
-
-// 
 .button_form{
     display: inline-block;
     max-width: 72px;
