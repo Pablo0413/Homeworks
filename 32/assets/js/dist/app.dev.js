@@ -13,7 +13,7 @@ $(function () {
 });
 $(document).ready(function () {
   $('ul.nav_list > li').click(function (e) {
-    $('ul.nav_list > li').removeClass('acitve');
+    $('ul.nav_list > li').removeClass('active');
     $(this).addClass('active');
   });
 }); // news slider
