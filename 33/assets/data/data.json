@@ -1,0 +1,22 @@
+[
+    {
+        "name": "milk",
+        "price": 20,
+        "amount": 2
+    },
+    {
+        "name": "bread",
+        "price": 5,
+        "amount": 1
+    },
+    {
+        "name": "beer",
+        "price": 15,
+        "amount": 50
+    },
+    {
+        "name": "water",
+        "price": 3,
+        "amount": 1
+    }
+]
