@@ -36,8 +36,8 @@
                         <a href="#contacts" class="link_item">Contacts</a>
                     </li>
                     <li class="nav_item">
-                        <a href="https://g.page/BarberShopNYC-302w50?share"
-                            class="link_item_text" target="_blank">302 W 50th St, NY, NY 10019
+                        <a href="https://g.page/BarberShopNYC-302w50?share" class="link_item_text" target="_blank">302 W
+                            50th St, NY, NY 10019
                             <a href="#" class="icon-location"></a>
                         </a>
 
@@ -368,23 +368,39 @@
                 </div>
         </section>
         <div class="form_wrapper container">
-            <form class="form">
+            <form class="form" method="post" class="al-form">
                 <h3 class="form_title">Get in consultation with our expert barbers</h3>
                 <span class="form_subheading">Expand Call-to-Action Details</span>
                 <div class="form_input">
-                    <div class="phone">
-                        <label class="label">
-                            <input type="phone" placeholder="+1 (___) ___-__-__" name="phone" class="input" required>
-                        </label>
+                    <div class="contact_box">
+                        <div class="name">
+                            <label for="name">
+                                <input type="text" placeholder="Your Name" name="name" class="input" id="name" minlength="3" maxlength="20" required>
+                            </label>
+                        </div>
+                        <div class="surname">
+                            <label for="surname">
+                                <input type="text" placeholder="Your Surname" name="name" class="input" id="name" minlength="3" maxlength="20" required>
+                            </label>
+                        </div>
                     </div>
-                    <div class="email">
-                        <label class="label">
-                            <input type="email" placeholder="Email" name="email" class="input" required>
-                        </label>
 
+                    <div class="contact_box">
+                        <div class="phone">
+                            <label class="label">
+                                <input type="tel" placeholder="Phone number" name="phone" class="input" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="phone" required>
+                            </label>
+                        </div>
+                        <div class="email">
+                            <label class="label">
+                                <input type="email" placeholder="Email" name="email" class="input" id="email" required>
+                            </label>
+
+                        </div>
                     </div>
-                    <button type="submit" class="button">Book now</button>
+
                 </div>
+                <button type="submit" class="button">Book now</button>
                 <div class="terms">
                     <label class="checkbox_wrapper">
                         <span class="terms_text">By clicking on the button, you agree to the <a href="#"
@@ -410,20 +426,31 @@
                             Contacts
                         </h2>
                         <ul class="contacts_list">
-                            <a href="tel:8 (800) 000-00-00" class="link"><li class="link_item"><span class="icon-phone"></span> 8 (800) 000-00-00</li></a>
-                            <a href="mailto:info@sitename.com" class="link"><li class="link_item"><span class="icon-envelope"></span> info@sitename.com</li></a>
-                            <a href="https://g.page/BarberShopNYC-302w50?share" target="_blank" class="link"><li class="link_item"><span class="icon-location"></span> 302 W 50th St, NY, NY 10019</li></a>
-                            <a href="#" class="link"><li class="link_item"><span class="icon-clock2"></span> Daily from 9 to 20</li></a>
+                            <a href="tel:8 (800) 000-00-00" class="link">
+                                <li class="link_item"><span class="icon-phone"></span> 8 (800) 000-00-00</li>
+                            </a>
+                            <a href="mailto:info@sitename.com" class="link">
+                                <li class="link_item"><span class="icon-envelope"></span> info@sitename.com</li>
+                            </a>
+                            <a href="https://g.page/BarberShopNYC-302w50?share" target="_blank" class="link">
+                                <li class="link_item"><span class="icon-location"></span> 302 W 50th St, NY, NY 10019
+                                </li>
+                            </a>
+                            <a href="#" class="link">
+                                <li class="link_item"><span class="icon-clock2"></span> Daily from 9 to 20</li>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-    </main> 
+    </main>
     <footer class="footer">
         <span class="footer_text">© All rights reserved</span>
         <div class="footer_links">
-            <span class="first_par">Icons by <a href="https://icomoon.io/app/#/select/font" target="_blank" class="footer_link">Eucalyp</a> on <a target="_blank" href="https://icomoon.io/app/#/select/font" class="footer_link">Flaticons</a></span>
+            <span class="first_par">Icons by <a href="https://icomoon.io/app/#/select/font" target="_blank"
+                    class="footer_link">Eucalyp</a> on <a target="_blank" href="https://icomoon.io/app/#/select/font"
+                    class="footer_link">Flaticons</a></span>
             <span class="second_par">Images by Unsplash and Pexels</span>
         </div>
     </footer>
