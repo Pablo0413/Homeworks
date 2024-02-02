@@ -227,3 +227,9 @@ img {
 .nav_list .subtext {
   display: inline-block;
 }
+.contact_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-direction: column;
+}
