@@ -30,6 +30,12 @@
   padding-left: 15px;
   min-width: 135px;
 }
+.contact_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-direction: column;
+}
 
 .nav_list {
   font-family: "Fira Sans", sans-serif;
